@@ -1,0 +1,21 @@
+<html lang="en">
+
+<head>
+    <title>Welcome!</title>
+</head>
+<body>
+<script id="script1" type="text/html">
+    <h1>Welcome <%=user%>!</h1>
+</script>
+
+<div id="contentTop"></div>
+<p>Our latest product</p>
+<script src="template.js"></script>
+<script>
+        var data = JSON.parse(window.java.getString());
+        var tpl = template(document.getElementById('script1').innerHTML);
+        var html = tpl(data);
+        document.getElementById('contentTop').innerHTML = html;
+</script>
+</body>
+</html>
